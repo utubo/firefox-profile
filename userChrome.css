@@ -1,0 +1,49 @@
+/* コンテキストメニューアイコンのdarkモード対応 */
+.menuitem-iconic {
+	fill:var(--button-color, ButtonText);
+	-moz-context-properties: fill;
+}
+#reader-mode-button {
+	display: none;
+}
+#pageAction-urlbar-_testpilot-containers {
+	display: none;
+}
+
+/* タブを閉じるボタンはマウスホバーのときだけ表示 */
+.tab-close-button {
+  display:none;
+}
+.tab-content:hover .tab-close-button {
+  display:block;
+}
+
+/* タブのデフォルト幅 */
+tab {
+    width: 200px !important;
+}
+
+/* 伸縮自在のスペースを0～100%まで伸縮するように */
+toolbarspring {
+    -moz-box-flex: 100 !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+}
+
+/* ブックマークツールバーのフォルダアイコンを非表示にする(アイコン代わりにフォルダ名を絵文字1文字にしておく) */
+#personal-bookmarks toolbarbutton[container].bookmark-item>image {
+    display: none;
+}
+/* ブックマークツールバーのフォルダの背景にフォルダのシルエットを表示する */
+#personal-bookmarks toolbarbutton[container].bookmark-item .toolbarbutton-text {
+    background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32"><path fill="white" opacity="0.3" d="M1 3l3-4h6l3 4h15v17h-27z"/></svg>');
+    background-repeat: no-repeat;
+    display: block; font-family: "Arial", "Segoe UI Symbol", sans-serif;
+    font-size:16px;
+    height: 23px;
+    opacity: 1;
+    padding-top: 3px;
+    text-align: center;
+    width: 23px;
+}
+
