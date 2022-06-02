@@ -3,6 +3,8 @@
 	fill:var(--button-color, ButtonText);
 	-moz-context-properties: fill;
 }
+
+/* アドレスバーにある使わないボタンを非表示 */
 #reader-mode-button {
 	display: none;
 }
